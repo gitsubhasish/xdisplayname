@@ -23,7 +23,6 @@ const FormComponent = () => {
           type="text"
           onChange={(e) => setFirstName(e.target.value)}
           placeholder="First Name"
-          required
         />
         <br clear="all" />
         Last Name:
@@ -31,7 +30,6 @@ const FormComponent = () => {
           type="text"
           onChange={(e) => setLastName(e.target.value)}
           placeholder="Last Name"
-          required
         />
         <br clear="all" />
         <button type="submit">Submit</button>
