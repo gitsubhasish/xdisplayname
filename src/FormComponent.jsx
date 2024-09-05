@@ -1,13 +1,13 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 
 const FormComponent = () => {
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
-  const [isFullName, setIsFullName] = useState(false);
+  const [fullName, setFullName] = useState("");
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    setIsFullName(true);
+    setFullName(`${firstName} ${lastName}`);
   };
 
   return (
@@ -24,11 +24,11 @@ const FormComponent = () => {
           />
           <br clear="all" />
           <br clear="all" />
-          Last name :
+          Last Name :
           <input
             type="text"
             onChange={(e) => setLastName(e.target.value)}
-            placeholder="Last name"
+            placeholder="Last Name"
             required
           />
           <br clear="all" />
@@ -36,7 +36,7 @@ const FormComponent = () => {
           <button type="submit">Submit</button>
           <br clear="all" />
           <br clear="all" />
-          {isFullName ? `Full Name: ${firstName} ${lastName}` : null}
+          {fullName && `Full Name: ${fullName}`}
         </form>
       </div>
     </div>
