@@ -7,7 +7,11 @@ const FormComponent = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    setFullName(`${firstName} ${lastName}`);
+    if (firstName && lastName) {
+      setFullName(`${firstName} ${lastName}`);
+    } else {
+      setFullName("");
+    }
   };
 
   return (
