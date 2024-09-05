@@ -36,7 +36,7 @@ const FormComponent = () => {
           <button type="submit">Submit</button>
           <br clear="all" />
           <br clear="all" />
-          {isFullName ? `Full Name : ${firstName} ${lastName}` : null}
+          {isFullName ? `Full Name: ${firstName} ${lastName}` : null}
         </form>
       </div>
     </div>
