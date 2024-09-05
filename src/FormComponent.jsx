@@ -11,7 +11,7 @@ const FormComponent = () => {
   };
 
   return (
-    <div style={{ margin: 50 }}>
+    <div style={{ margin: 50, width: 500 }}>
       <form onSubmit={handleSubmit} style={{ textAlign: "left" }}>
         <h1>Full Name Display</h1>
         First Name:
@@ -32,10 +32,10 @@ const FormComponent = () => {
         <br clear="all" />
         <button type="submit">Submit</button>
         <br clear="all" />
-        <span style={{ marginLeft: 0 }}>
-          {fullName && `Full Name: ${fullName}`}
-        </span>
       </form>
+      <div style={{ textAlign: "left" }}>
+        {fullName && `Full Name: ${fullName}`}
+      </div>
     </div>
   );
 };
